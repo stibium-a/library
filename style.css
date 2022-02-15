@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1170px;
+    margin: auto;
+    background-color: ghostwhite;
+}
+
+h2 {
+    color: rgb(23, 155, 137);
+    padding: 20px 0 20px 20px;
+}
+
+.libHeader {
+    background-color: grey;
+}
+
+.libHeaderNav {
+    display: flex;
+    margin: 0 0 0 40px;
+}
+
+.libHeaderItem {
+    background-color: grey;
+    padding: 15px 0;
+    width: 140px;
+    text-align: center;
+    color: honeydew;
+    font-size: 22px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    position: relative;
+}
+
+.libHeaderItem::after {
+    content: "";
+    width: 140px;
+    height: 4px;
+    background-color: #14e4c1;
+    position: absolute;
+    left: -2px;
+    top: 56px;
+    display: none;
+}
+
+.libHeaderItem:hover::after {
+    display: block;
+}
+
+.wrapperStyles {
+    margin: 0 0 10px 0;
+}
+
+.allCards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding: 20px 0;
+    color: rgb(23, 155, 137);
+    border-bottom: 1px solid #bbb2b2;
+}
+
+.newItemBtn {
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.newItemBtn:hover {
+    cursor: pointer;
+    background-color: lightsteelblue;
+}
+
+.searchSortPanel {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+}
+
+.sortPan, .searchPan {
+    font-size: 20px;
+}
+
+.sortItemsSelect, .searchItemsInput {
+    width: 200px;
+    height: 30px;
+}
+
+.sortAndSearchBtn {
+    width: 100px;
+    height: 30px;
+}
+
+
+/* STATISTICS */
+
+.tablesWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+
+.statTableBlock {
+    width: 550px;
+}
+
+.tableBlock {
+    margin: 0 20px;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.oneHead {
+    margin: 0 20px;
+}
+
+.tableForm {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #bbb2b2;
+}
+
+
+/* BOOKS TABLE STYLES */
+
+.booksHeaderTable thead th:nth-child(1) {
+    width: 5.8%;
+}
+
+.booksHeaderTable thead th:nth-child(2) {
+    width: 31.2%;
+}
+
+.booksHeaderTable thead th:nth-child(3) {
+    width: 23.2%;
+}
+
+.booksHeaderTable thead th:nth-child(4) {
+    width: 11.5%;
+}
+
+.booksHeaderTable thead th:nth-child(5) {
+    width: 7%;
+}
+
+.booksHeaderTable thead th:nth-child(6) {
+    width: 6.9%;
+}
+
+.booksHeaderTable thead th:nth-child(7) {
+    width: 5.85%;
+}
+
+
+/* --------------------- */
+
+.booksHeaderTable thead th:nth-child(8) {
+    transition: all 0.5s ease;
+}
+
+.booksHeaderTable thead th:nth-child(8):hover {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+
+/* --------------------------------  */
+
+.booksTable thead {
+    visibility: collapse;
+}
+
+thead th {
+    height: 40px;
+    border: 1px solid #bbb2b2;
+}
+
+tbody td {
+    text-align-last: left;
+    padding-left: 10px;
+}
+
+.booksTable thead th:nth-child(1) {
+    width: 5%;
+}
+
+.booksTable thead th:nth-child(2) {
+    width: 27%;
+}
+
+.booksTable thead th:nth-child(3) {
+    width: 20%;
+}
+
+.booksTable thead th:nth-child(4) {
+    width: 10%;
+}
+
+.booksTable thead th:nth-child(5) {
+    width: 6%;
+}
+
+.booksTable thead th:nth-child(6) {
+    width: 6%;
+}
+
+.booksTable thead th:nth-child(7) {
+    width: 5%;
+    transition: all 0.5s ease;
+}
+
+.booksTable thead th:nth-child(8) {
+    width: 5%;
+}
+
+.booksTable tbody td:nth-child(7) {
+    padding-left: 20px;
+}
+
+.booksTable tbody td:nth-child(8) {
+    padding-left: 30px;
+}
+
+
+/* VISITORS TABLE  */
+
+.visitorsHeaderTable th:nth-child(1) {
+    width: 5.6%;
+}
+
+.visitorsHeaderTable th:nth-child(2) {
+    width: 50%;
+}
+
+.visitorsHeaderTable th:nth-child(3) {
+    width: 27.85%;
+}
+
+.visitorsHeaderTable th:nth-child(4) {
+    width: 7.15%;
+}
+
+.visitorsHeaderTable th:last-child {
+    transition: all 0.5s ease;
+}
+
+.visitorsHeaderTable th:last-child:hover {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+
+/* ------------------------ */
+
+.visitorsTable thead {
+    visibility: collapse;
+}
+
+.visitorsTable thead th:nth-child(1) {
+    width: 3%;
+}
+
+.visitorsTable thead th:nth-child(2) {
+    width: 27%;
+}
+
+.visitorsTable thead th:nth-child(3) {
+    width: 15%;
+}
+
+.visitorsTable thead th:nth-child(4) {
+    width: 3%;
+}
+
+.visitorsTable thead th:nth-child(5) {
+    width: 2%;
+}
+
+.visitorsTable tbody td:nth-child(4) {
+    padding-left: 25px;
+}
+
+.visitorsTable tbody td:nth-child(5) {
+    padding-left: 35px;
+}
+
+
+/* CARDS TABLE STYLES */
+
+.headerTable th:nth-child(1) {
+    width: 5%;
+}
+
+.headerTable th:nth-child(2) {
+    width: 29.5%;
+}
+
+.headerTable th:nth-child(3) {
+    width: 34.5%;
+}
+
+.headerTable th:nth-child(4) {
+    width: 93px;
+}
+
+.headerTable th:nth-child(5) {
+    width: 180px;
+}
+
+/* ------------------------- */
+
+.cardsTable th:nth-child(1) {
+    width: 5%;
+}
+
+.cardsTable thead {
+    visibility: collapse;
+}
+
+.cardsTable th:nth-child(2) {
+    width: 30%;
+}
+
+.cardsTable th:nth-child(3) {
+    width: 35%;
+}
+
+.cardsTable th:nth-child(4) {
+    width: 100px;
+}
+
+.cardsTable th:nth-child(5) {
+    width: 180px;
+}
+
+
+/* STATISTIC TABLE STYLES  */
+
+.statTab th:nth-child(1) {
+    width: 60px;
+}
+
+
+/* ------------Create modal panel--------------- */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.modalWrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dataPanel {
+    width: 600px;
+    background-color: #fff;
+    padding: 30px 30px 30px 50px;
+    border-radius: 7px;
+}
+
+.closetabWrap {
+    display: flex;
+    justify-content: end;
+}
+
+.closeTab {
+    width: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.closeTab:hover {
+    cursor: pointer;
+    background-color: darksalmon;
+}
+
+.dataPanel h4 {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 0 15px 0;
+}
+
+.dataPanel p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dataPanel input, .dataPanel select {
+    width: 95%;
+    height: 35px;
+    margin: 0 0 15px 0;
+    border-radius: 4px;
+}
+
+.applyBtn {
+    width: 95%;
+    height: 30px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.applyBtn:hover {
+    background-color: darkgrey;
+}
+
+/* -------styles bor blocks---------------- */
+
+.hiddenStyle {
+    display: none;
+}
+
+.visibleStyle {
+    display: block;
+}
+
+
+/* styles for tabcells */
+
+.prettyDelete {
+    background-color: bisque;
+    font-weight: bold;
+    -webkit-transition: all 1s ease;
+    transition: all 0.5s ease;
+}
+
+.prettyEdit {
+    background-color: khaki;
+    cursor: pointer;
+}
+
+.bookCell {
+    height: 40px;
+    border: 1px solid #bbb2b2;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+
+.disabled {
+    pointer-events: none;
+    background-color: lightgray;
+}
+
+
+/* -------imgStyles------- */
+
+.imgStyles {
+    width: 30px;
+    height: 30px;
+}

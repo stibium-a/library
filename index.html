@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="shortcut icon" href="img/62105_books_learn_school_study_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Toastr/Toastr/build/toastr.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>LIBRARY</h2>
+
+        <div class="libHeader">
+            <div class="libHeaderNav">
+                <button class="libHeaderItem booksBtn" value="bookTableBody" data-columns="8">Books</button>
+                <button class="libHeaderItem visitorsBtn" value="visitorTableBody" data-columns="5">Visitors</button>
+                <button class="libHeaderItem cardsBtn" value="cardTableBody" data-columns="5">Cards</button>
+                <button class="libHeaderItem statBtn" value="statTableBody" data-columns="2">Statistics</button>
+            </div>
+        </div>
+
+        <!-- PANELS  -->
+
+        <div class="bookWrapper wrapper wrapperStyles">
+            <div class="tools">
+                <div class="allCards">
+                    <h3>ALL BOOKS:</h3>
+                    <button class="newBookBtn newItemBtn">NEW BOOK</button>
+                </div>
+                <div class="searchSortPanel">
+                    <div class="sortPan">
+                        <label for="sort">Sort by:</label>
+                        <select name="sort" id="sortitem" class="sortItemsSelect">
+                            <option value="title">Title</option>
+                            <option value="author">Author</option>
+                            <option value="Count">Count</option>
+                            <option value="ID">ID</option>
+                        </select>
+                        <button class="sortBookBtn sortAndSearchBtn">Sort</button>
+                    </div>
+                    <div class="searchPan">
+                        <label for="search">Search: </label>
+                        <input type="search" name="search" id="searchItem" class="searchItemsInput">
+                        <button class="searchBookBtn sortAndSearchBtn">Search</button>
+                    </div>
+                </div>
+
+                <div class="oneHead">
+                    <table class="booksHeaderTable tableForm">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>TITLE</th>
+                                <th>AUTHOR</th>
+                                <th>PRODUSER</th>
+                                <th>YEAR</th>
+                                <th>COUNT</th>
+                                <th>EDIT</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="tableBlock">
+                    <table class="booksTable tableForm">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>TITLE</th>
+                                <th>AUTHOR</th>
+                                <th>PRODUSER</th>
+                                <th>YEAR</th>
+                                <th>COUNT</th>
+                                <th>EDIT</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bookBody tableBodyForm editable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="visitorWrapper wrapper wrapperStyles">
+            <div class="tools allVisitors">
+                <div class="allCards">
+                    <h3>ALL VISITORS:</h3>
+                    <button class="newItemBtn createNewVisitorBtn">NEW VISITOR</button>
+                </div>
+                <div class="searchSortPanel">
+                    <div class="sortPan">
+                        <label for="sort">Sort by:</label>
+                        <select name="sort" id="sortVisitorTabItem" class="sortItemsSelect">
+                            <option value="id">ID</option>
+                            <option value="name">Name</option>
+                        </select>
+                        <button class="sortAndSearchBtn sortVisitorBtn">Sort</button>
+                    </div>
+                    <div class="searchPan">
+                        <label for="search">Search: </label>
+                        <input type="search" name="search" id="searchVisitorItem" class="searchItemsInput">
+                        <button class="sortAndSearchBtn searchVisitorBtn">Search</button>
+                    </div>
+                </div>
+
+                <div class="oneHead">
+                    <table class="tableForm visitorsHeaderTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>PHONE</th>
+                                <th>EDIT</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="tableBlock">
+                    <table class="tableForm visitorsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>PHONE</th>
+                                <th>EDIT</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody class="visitorBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardWrapper wrapper wrapperStyles">
+            <div class="tools allCardsPanel">
+                <div class="allCards">
+                    <h3>ALL CARDS:</h3>
+                    <button class="newItemBtn createNewCardBtn">NEW CARD</button>
+                </div>
+                <div class="searchSortPanel">
+                    <div class="sortPan">
+                        <label for="sort">Sort by:</label>
+                        <select name="sort" id="sortCardTabItem" class="sortItemsSelect">
+                            <option value="id">ID</option>
+                            <option value="visitorName">Visitor</option>
+                            <option value="bookName">Book</option>
+                            <option value="borrowDate">Borrow Date</option>
+                        </select>
+                        <button class="sortAndSearchBtn sortCardBtn">Sort</button>
+                    </div>
+                    <div class="searchPan">
+                        <label for="search">Search: </label>
+                        <input type="search" name="search" id="searchCardItem" class="searchItemsInput">
+                        <button class="sortAndSearchBtn searchCardBtn">Search</button>
+                    </div>
+                </div>
+
+                <div class="oneHead">
+                    <table class="tableForm headerTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>VISITOR</th>
+                                <th>BOOK</th>
+                                <th>BORROW DATE</th>
+                                <th>RETURN DATE</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="tableBlock">
+                    <table class="tableForm cardsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Visitor</th>
+                                <th>Book</th>
+                                <th>Borrow Date</th>
+                                <th>Return Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cardBody tablesBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="statisticWrapper wrapper wrapperStyles">
+            <div class="tools allCardsPanel">
+                <div class="allCards">
+                    <h3>STATISTICS:</h3>
+                </div>
+                <div class="searchSortPanel">
+                    <div class="sortPan">
+                        <label for="sort">Show:</label>
+                        <select name="sort" id="sortStatTabItem" class="sortItemsSelect">
+                            <option value="active visitor">Most active visitor</option>
+                            <option value="popular book">Most popular book</option>
+                        </select>
+                        <button class="sortAndSearchBtn showStatTabBtn">Show</button>
+                    </div>
+                </div>
+
+                <div class="tablesWrapper">
+                    <div class="tableContainer">
+                        <div class="statTableBlock">
+                            <table class="tableForm statTab">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>NAME</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="activeVisitorsBody statBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL WINDOWS -->
+
+    <div class="modal modalNewBook">
+        <div class="modalWrap">
+            <div class="dataPanel">
+                <div class="closetabWrap">
+                    <div class="closeBookTab closeTab">X</div>
+                </div>
+                <h4>Create book card</h4>
+                <p class="bookID">ID: </p>
+                <input type="text" class="inputItem" required>
+
+                <p class="bookTitle">Title: </p>
+                <input type="text" class="inputItem" required>
+
+                <p class="bookAuthor">Author: </p>
+                <input type="text" class="inputItem" required>
+
+                <p class="bookProducer">Producer: </p>
+                <input type="text" class="inputItem" required>
+
+                <p class="bookYear">Year: </p>
+                <input type="text" class="inputItem" required>
+
+                <p class="bookCount">Count: </p>
+                <input type="text" class="inputItem" required>
+
+                <button class="saveBookBtn applyBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalEditBook modal editing">
+        <div class="modalWrap">
+            <div class="dataPanel">
+                <div class="closetabWrap">
+                    <div class="closeEditBookTab closeTab">X</div>
+                </div>
+                <h4>Edit book card</h4>
+                <p class="bookID">ID: </p>
+                <input type="text" class="editInputItem">
+
+                <p class="bookTitle">Title: </p>
+                <input type="text" class="editInputItem">
+
+                <p class="bookAuthor">Author: </p>
+                <input type="text" class="editInputItem">
+
+                <p class="bookProducer">Producer: </p>
+                <input type="text" class="editInputItem">
+
+                <p class="bookYear">Year: </p>
+                <input type="text" class="editInputItem">
+
+                <p class="bookCount">Count: </p>
+                <input type="text" class="editInputItem">
+
+                <button class="editBookBtn applyBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal createNewVisitorTab">
+        <div class="modalWrap">
+            <div class="dataPanel">
+                <div class="closetabWrap">
+                    <div class=" closeTab closeVisitorTab">X</div>
+                </div>
+                <h4>Create visitor card</h4>
+                <p class="visitorID">ID: </p>
+                <input type="text" class="inputStyle inputVisitorItem" required>
+
+                <p class="visitorName">Name: </p>
+                <input type="text" class="inputStyle inputVisitorItem" required>
+
+                <p class="visitorPhone">Phone: </p>
+                <input type="text" class="inputStyle inputVisitorItem" required>
+
+                <button class="applyBtn saveVisitorBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal editVisitorTab editing">
+        <div class="modalWrap">
+            <div class="dataPanel">
+                <div class="closetabWrap">
+                    <div class=" closeTab closeEditVisitorTab">X</div>
+                </div>
+                <h4>Edit visitor card</h4>
+                <p class="visitorID">ID: </p>
+                <input type="text" class="inputStyle inputEditVisitorItem" required>
+
+                <p class="visitorName">Name: </p>
+                <input type="text" class="inputStyle inputEditVisitorItem" required>
+
+                <p class="visitorPhone">Phone: </p>
+                <input type="text" class="inputStyle inputEditVisitorItem" required>
+
+                <button class="applyBtn editVisitorBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal createNewCardTab">
+        <div class="modalWrap">
+            <div class="dataPanel">
+                <div class="closetabWrap">
+                    <div class=" closeTab closeCardTab">X</div>
+                </div>
+                <h4>New card</h4>
+
+                <p class="cardVisitorName">Visitor: </p>
+                <select name="allVisitorsName" id="selectVisitorItem" class="inputStyle cardSelector">
+                    <option value="emptyOption"></option>
+                </select>
+
+                <p class="cardBookTitle">Book: </p>
+
+                <select name="allBooksName" id="selectBookItem" class="inputStyle cardSelector">
+                    <option value="emptyOption"></option>
+                </select>
+
+                <p class="cardBookTitle">Term of use: </p>
+
+                <select name="allBooksName" id="selectTermsItem" class="inputStyle settingData cardSelector">
+                    <option value="emptyOption"></option>
+                    <option value="" class="termID">1 month</option>
+                    <option value="" class="termID">2 month</option>
+                    <option value="" class="termID">3 month</option>
+                </select>
+
+                <button class="applyBtn saveBookCardBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="Toastr/Toastr/toastr.js"></script>
+    <script src="plugins.js"></script>
+    <script src="books.js"></script>
+    <!-- <script src="visitors.js"></script> -->
+    <!-- <script src="cards.js"></script> -->
+    <!-- <script src="statistic.js"></script> -->
+</body>
+
+</html>
